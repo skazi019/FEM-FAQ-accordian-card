@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --text-dark-blue: hsl(238, 29%, 16%);
+    --text-soft-red: hsl(14, 88%, 65%);
+    --text-very-dark-gray-blue: hsl(237, 12%, 33%);
+    --text-dark-gray-blue: hsl(240, 6%, 50%);
+    --gradient-soft-violet: hsl(273, 75%, 66%);
+    --gradient-soft-blue: hsl(240, 73%, 65%);
+    --dvider-light-blue: hsl(240, 5%, 91%);
+    --font-size: 12px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    background: linear-gradient(var(--gradient-soft-violet), var(--gradient-soft-blue));
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    height: auto;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
+}
+
+.card {
+    padding: 0 1rem;
+    background-color: white;
+    margin: 0 1.5rem;
+    position: relative;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-graphic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-graphic .main-graphic {
+    position: absolute;
+    width: 15rem;
+    top: -6.7rem;
+}
+
+.hero-graphic .background-graphic {
+    width: 15rem;
+    top: 0rem;
+    position: absolute;
+}
+
+.card .content {
+    padding: 6rem 0 0 0;
+}
+
+.card .content .heading {
+    text-align: center;
+}
