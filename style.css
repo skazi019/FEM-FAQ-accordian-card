@@ -41,7 +41,7 @@ main {
     background-color: white;
     margin: 0 1.5rem;
     position: relative;
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     display: flex;
     flex-direction: column;
 }
