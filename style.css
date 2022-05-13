@@ -33,17 +33,19 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 8rem;
+    margin-top: 2rem;
 }
 
 .card {
-    padding: 0 1rem;
+    padding: 0 1.5rem;
     background-color: white;
     margin: 0 1.5rem;
     position: relative;
     border-radius: 1.5rem;
     display: flex;
     flex-direction: column;
+    width: 90%;
+    box-shadow: 0 32px 48px 0px #00000059;
 }
 
 .hero-graphic {
@@ -55,19 +57,21 @@ main {
 }
 
 .hero-graphic .main-graphic {
+    content: url("./images/illustration-woman-online-mobile.svg");
     position: absolute;
     width: 15rem;
     top: -6.7rem;
 }
 
 .hero-graphic .background-graphic {
+    content: url("./images/bg-pattern-mobile.svg");
     width: 15rem;
     top: 0rem;
     position: absolute;
 }
 
 .card .content {
-    padding: 6rem 0 0 0;
+    padding: 6rem 0 2rem 0;
 }
 
 .card .content .heading {
@@ -77,6 +81,14 @@ main {
 .card .content .question-answer {
     width: 100%;
     font-size: 1rem;
+    margin: 1rem 0;
+}
+
+.card .content .question {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .card .content .question-answer .question .dropdown {
@@ -87,9 +99,107 @@ main {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    padding: 0;
+    color: var(--text-dark-gray-blue);
+    transition: 0.4s;
+}
+
+.card .content .question-answer .question .dropdown:hover {
+    color: var(--text-soft-red);
+    transition: color .2s ease-in-out;
 }
 
 .card .content .question-answer .question .answer {
-    display: none;
-    transition: display ease 1s;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.question-answer .question p {
+    font-size: .5rem;
+    color: var(--text-dark-gray-blue);
+}
+
+.text-bold {
+    color: var(--text-dark-blue);
+    font-weight: 700;
+}
+
+.flip {
+    transform: rotate(180deg);
+}
+
+.question-answer .question .answer p {
+    font-size: .5rem;
+    word-wrap: break-word;
+}
+
+.card .content .divider {
+    height: 1px;
+    border: none;
+    width: 100%;
+    background-color: var(--dvider-light-blue);
+}
+
+.card .content .last-divider {
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 1080px) {
+
+    main {
+        margin: 0;
+    }
+
+    .card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        width: 65vw;
+        height: 65vh;
+        overflow: hidden;
+        z-index: 5;
+    }
+
+    .card .hero-graphic {
+        position: relative;
+    }
+
+    .hero-graphic .main-graphic {
+        content: url("./images/illustration-woman-online-desktop.svg");
+        position: absolute;
+        width: 28rem;
+        top: -11rem;
+        left: -8rem;
+        z-index: 10;
+    }
+
+    .hero-graphic .main-graphic-box {
+        content: url('./images/illustration-box-desktop.svg');
+        position: absolute;
+        z-index: 1000 !important;
+        top: -2rem;
+        left: -7.5rem;
+    }
+
+    .hero-graphic .background-graphic {
+        content: url("./images/bg-pattern-desktop.svg");
+        width: 55rem;
+        top: -31rem;
+        left: -35rem;
+        position: absolute;
+        overflow: hidden;
+    }
+
+    .card .content {
+        padding: 0;
+        margin: 0;
+        margin-right: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
 }
